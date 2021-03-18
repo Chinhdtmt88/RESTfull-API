@@ -1,0 +1,29 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chinhdtmt88/RESTfull-API.git"
+  },
+  "author": "ChinhIoT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chinhdtmt88/RESTfull-API/issues"
+  },
+  "homepage": "https://github.com/Chinhdtmt88/RESTfull-API#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
