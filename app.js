@@ -1,4 +1,5 @@
 const express = require('express');
+require('dotenv').config()
 const app = express();
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
@@ -6,11 +7,12 @@ const dbConfig =require('./api/config/db.config');
 
 const productRoutes = require('./api/routes/products');
 const orderRoutes = require('./api/routes/orders');
-
+const userRoutes = require("./api/routes/user");
 
 
 
 app.use(morgan('dev'));
+app.use('/uploads',express.static('uploads'));
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
@@ -45,6 +47,7 @@ db.mongoose
 //Route which should handle req 
 app.use('/products', productRoutes);
 app.use('/orders', orderRoutes);
+app.use('/user', userRoutes);
 
 app.use((req,res,next) =>{
     const error =new Error('Not found');

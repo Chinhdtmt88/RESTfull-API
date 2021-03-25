@@ -8,5 +8,5 @@ const db ={};
 db.mongoose = mongoose;
 
 db.products = require("./product")(mongoose);
-
+db.orders = require("./order")(mongoose);
 module.exports = db;
