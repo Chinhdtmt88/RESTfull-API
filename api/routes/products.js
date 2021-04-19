@@ -32,8 +32,13 @@ fileFilter:fileFilter
 });
 
 router.get('/',ProductsController.product_get_all);
-router.post('/',checkAuth,upload.single('productImage'),ProductsController.Product_create_product );
+
+router.post('/',checkAuth, upload.single('productImage'),ProductsController.Product_create_product );
+
 router.get('/:productId', ProductsController.product_get_product);
+
 router.patch('/:productId',checkAuth,ProductsController.product_update_product);
+
 router.delete('/:productId',checkAuth,ProductsController.product_delete );
+
 module.exports = router;
